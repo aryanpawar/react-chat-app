@@ -13,7 +13,10 @@ export default function ChatWindow() {
   useEffect(() => {
     fetch("https://jsonplaceholder.typicode.com/users")
       .then((response) => response.json())
-      .then((json) => setUsers(json));
+      .then((json) => setUsers(json))
+      .catch((error) => {
+        console.log(error)
+      });
   }, [])
   
   const handleClick = (e) => {
@@ -34,21 +37,25 @@ export default function ChatWindow() {
         <div className="row">
           <div className="col-3 friends-list-column card">
             <ul className="friends-list">
-              {users.map((user) => {
-                return (
-                  <>
-                    <li
-                      onClick={handleClick}
-                      key={user.id}
-                      id={user.name}
-                      className="friend-name"
-                    >
-                      {user.name}
-                    </li>
-                    <hr></hr>
-                  </>
-                );
-              })}
+              {users.length === 0 ? (
+                <h2>Friends Not Found</h2>
+              ) : (
+                users.map((user) => {
+                  return (
+                    <>
+                      <li
+                        onClick={handleClick}
+                        key={user.id}
+                        id={user.name}
+                        className="friend-name"
+                      >
+                        {user.name}
+                      </li>
+                      <hr></hr>
+                    </>
+                  );
+                })
+              )}
             </ul>
           </div>
           <div className="col-7 chat-view card">

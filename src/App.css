@@ -65,7 +65,7 @@ li:hover {
 .message-content {
   height: 50vh;
   width: 39vw;
-  overflow-y: scroll;
+  overflow-y:auto;
   display: flex;
   flex-direction: column;
   align-items: flex-end;

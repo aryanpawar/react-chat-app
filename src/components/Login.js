@@ -26,6 +26,7 @@ export default function Login({ username, setUsername }) {
             onChange={changeHandler}
             placeholder="Enter username"
             autoComplete="off"
+            required
           />
         </div>
         <button type="submit" className="btn btn-primary my-2">

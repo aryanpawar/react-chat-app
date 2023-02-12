@@ -2,37 +2,88 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.card {
+  margin: 2vw;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.chat-view {
+  border: 1px solid black;
+  background-color: #FDEEDC;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.friends-list {
+  list-style-type: none;
+  text-align: left;
+  margin-top: 1vw;
+  border-radius: 5%;
+  padding: 0;
+  height: 60vh;
+  overflow-y: scroll;
+  font-weight: bold;
+}
+
+ul li:last-child {
+  border-bottom: none
+}
+
+.friends-list-column {
+  border: 1px solid black;
+  background-color: #FFD8A9;
+}
+
+.friend-name {
+  padding: 5%;
+}
+
+.friend-name {
+  padding: 5%;
+}
+
+#inputUsername {
+  margin-bottom: 5%;
+  margin-top: 5%;
+}
+
+.input-message{
+  width: 75%;
+  display: inline;
+  margin: 0;
+}
+
+li:hover {
+  cursor:pointer;
+}
+
+.login-form {
+  background-color: aqua;
+}
+
+.message {
+  width: fit-content;
+}
+
+.message-content {
+  height: 50vh;
+  width: 39vw;
+  overflow-y: scroll;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: flex-end;
 }
 
-.App-link {
-  color: #61dafb;
+.message-send-button {
+  margin-bottom: 1%;
+  margin-left: 1%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.send-message-ui {
+  position: absolute;
+  bottom: 0;
+  margin: 0;
+  left: 0;
 }
+
+.username {
+  font-weight: bold;
+}
+

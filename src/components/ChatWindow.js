@@ -23,7 +23,7 @@ export default function ChatWindow() {
     setChattingWith(e.target.id);
   }
 
-  return username === "" ? (
+  return localStorage.getItem("token") === "undefined" ? (
     <>
       <h1>Please Go To Homepage and Login</h1>
       <button className="btn btn-warning" onClick={() => navigate("/")}>

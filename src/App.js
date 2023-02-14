@@ -5,12 +5,13 @@ import NavBar from './components/NavBar';
 import Login from './components/Login';
 import { Route,Routes } from 'react-router-dom';
 import ChatWindow from './components/ChatWindow';
+import Register from './components/Register';
 
 export const UserContext = React.createContext()
 
 function App() {
 
-  const [username,setUsername] = useState("")
+  const [username, setUsername] = useState("")
 
   return (
     <div className="App">
@@ -20,6 +21,10 @@ function App() {
           <Route
             path="/"
             element={<Login username={username} setUsername={setUsername} />}
+          />
+          <Route
+            path="register"
+            element={<Register username={username} setUsername={setUsername} />}
           />
           <Route path="chat-window" element={<ChatWindow />} />
         </Routes>
